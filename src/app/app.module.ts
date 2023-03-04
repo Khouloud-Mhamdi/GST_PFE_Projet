@@ -8,6 +8,17 @@ import { AproposSectionComponent } from './components/apropos-section/apropos-se
 import { ContactPageComponent } from './components/contact-page/contact-page.component';
 import { ContactSectionComponent } from './components/contact-section/contact-section.component';
 import { DisciplinesSectionComponent } from './components/disciplines-section/disciplines-section.component';
+import { EventsSectionComponent } from './components/events-section/events-section.component';
+import { EventsPageComponent } from './components/events-page/events-page.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { NavBar1Component } from './components/nav-bar1/nav-bar1.component';
+import { NavBar2Component } from './components/nav-bar2/nav-bar2.component';
+import { HomePageComponent } from './components/home-page/home-page.component';
+import { IntroSectionComponent } from './components/intro-section/intro-section.component';
+import { LoginPageComponent } from './components/login-page/login-page.component';
+import { SignUpPageComponent } from './components/sign-up-page/sign-up-page.component';
+import { TeamSectionComponent } from './components/team-section/team-section.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +27,18 @@ import { DisciplinesSectionComponent } from './components/disciplines-section/di
     AproposSectionComponent,
     ContactPageComponent,
     ContactSectionComponent,
-    DisciplinesSectionComponent
+    DisciplinesSectionComponent,
+    EventsSectionComponent,
+    EventsPageComponent,
+    FooterComponent,
+    HeaderComponent,
+    NavBar1Component,
+    NavBar2Component,
+    HomePageComponent,
+    IntroSectionComponent,
+    LoginPageComponent,
+    SignUpPageComponent,
+    TeamSectionComponent
   ],
   imports: [
     BrowserModule,
