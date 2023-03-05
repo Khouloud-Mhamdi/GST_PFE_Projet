@@ -39,6 +39,232 @@
 2. Body and some general stuff
 *********************************/
 
+/* Position the image container (needed to position the left and right arrows) */
+
+
+/* CSS */
+
+
+
+/* CSS */
+
+
+/*****carrousel 3d avec navigation*****/
+
+
+*{box-sizing: border-box}
+
+
+img{max-width:100%}
+	
+	
+	
+	
+	
+.caroussel_diapo input{
+
+position: absolute;
+left: -9999px;
+margin: auto auto auto auto;
+
+}
+    
+
+.caroussel_diapo{
+
+position: relative;
+text-align: center;
+
+}
+
+
+.contenu_carou {
+
+width: 500px;
+height: 332px;
+perspective: 4000px
+
+}
+
+
+.caroussel{
+
+transform-style: preserve-3d;
+position: relative;
+width: 500px;
+height: 332px;
+transition: 1s
+	
+	}
+
+.caroussel img {
+	
+position: absolute;
+top: 0;
+left: 0;
+outline: 1px solid transparent;
+backface-visibility: hidden;
+transition: 1s
+	
+	}
+
+.caroussel img{
+
+filter: blur(3px);
+opacity: .8
+
+}	
+
+.caroussel img:nth-child(1){transform:translate3d(0,0,540px) scale(.8)}
+.caroussel img:nth-child(2){transform:rotateY(45deg) translateZ(540px) scale(.8)}
+.caroussel img:nth-child(3){transform:rotateY(90deg) translateZ(540px) scale(.8)}
+.caroussel img:nth-child(4){transform:rotateY(135deg) translateZ(540px) scale(.8)}
+.caroussel img:nth-child(5){transform:rotateY(180deg) translateZ(540px) scale(.8)}
+.caroussel img:nth-child(6){transform:rotateY(225deg) translateZ(540px) scale(.8)}
+.caroussel img:nth-child(7){transform:rotateY(270deg) translateZ(540px) scale(.8)}
+.caroussel img:nth-child(8){transform:rotateY(315deg) translateZ(540px) scale(.8)}
+
+.caroussel_diapo input[type=radio] + label {
+	
+cursor:pointer;
+background:hsl(203,77%,81%);
+display:inline-block;
+width:20px;
+border-radius:50%;
+height:20px
+	
+	}
+	
+.caroussel_diapo input[type=radio]:checked + label{
+
+background:hsl(203,77%,61%)
+
+}
+
+.caroussel_diapo label{
+
+background:hsl(203,77%,61%)
+
+}
+
+
+
+.caroussel_diapo input[name="rotation"]:checked ~ .contenu_carou .caroussel img:nth-child(n){
+	
+filter: drop-shadow(12px 12px 7px hsla(0,0%,0%,.5))
+	
+}	
+
+/*gauche*/
+.caroussel_diapo #carou_un:checked ~ .contenu_carou .caroussel{transform:translateZ(-540px)}
+.caroussel_diapo #carou_deux:checked ~ .contenu_carou .caroussel{transform:translateZ(-540px) rotateY(-45deg)}
+.caroussel_diapo #carou_trois:checked ~ .contenu_carou .caroussel{transform:translateZ(-540px) rotateY(-90deg)}
+.caroussel_diapo #carou_quatre:checked ~ .contenu_carou .caroussel{transform:translateZ(-540px) rotateY(-135deg)}
+.caroussel_diapo #carou_cinq:checked ~ .contenu_carou .caroussel{transform:translateZ(-540px) rotateY(-180deg)}
+.caroussel_diapo #carou_six:checked ~ .contenu_carou .caroussel{transform:translateZ(-540px) rotateY(-225deg)}
+.caroussel_diapo #carou_sept:checked ~ .contenu_carou .caroussel{transform:translateZ(-540px) rotateY(-270deg)}
+.caroussel_diapo #carou_huit:checked ~ .contenu_carou .caroussel{transform:translateZ(-540px) rotateY(-315deg)}
+
+
+/*droite*/
+.caroussel_diapo #carou_un:checked ~ .contenu_carou .caroussel img:nth-child(1){transform:translateZ(540px) scale(1);opacity:1}
+.caroussel_diapo #carou_deux:checked ~ .contenu_carou .caroussel img:nth-child(2){transform:rotateY(45deg) translateZ(540px) scale(1);opacity:1}
+.caroussel_diapo #carou_trois:checked ~ .contenu_carou .caroussel img:nth-child(3){transform:rotateY(90deg) translateZ(540px) scale(1);opacity:1}
+.caroussel_diapo #carou_quatre:checked ~ .contenu_carou .caroussel img:nth-child(4){transform:rotateY(135deg) translateZ(540px) scale(1);opacity:1}
+.caroussel_diapo #carou_cinq:checked ~ .contenu_carou .caroussel img:nth-child(5){transform:rotateY(180deg) translateZ(540px) scale(1);opacity:1}
+.caroussel_diapo #carou_six:checked ~ .contenu_carou .caroussel img:nth-child(6){transform:rotateY(225deg) translateZ(540px) scale(1);opacity:1}
+.caroussel_diapo #carou_sept:checked ~ .contenu_carou .caroussel img:nth-child(7){transform:rotateY(270deg) translateZ(540px) scale(1);opacity:1}
+.caroussel_diapo #carou_huit:checked ~ .contenu_carou .caroussel img:nth-child(8){transform:rotateY(315deg) translateZ(540px) scale(1);opacity:1}
+
+
+.button-43 {
+  background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
+  border-radius: .5rem;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+  padding: 1rem 1.75rem;
+  text-decoration: none;
+  width: 25%;
+  border: 0;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-43:hover {
+  background-image: linear-gradient(-180deg, #1D95C9 0%, #17759C 100%);
+}
+
+@media (min-width: 100px) {
+  .button-43 {
+    padding: 1rem 2rem;
+  }
+}
+.button-48 {
+  appearance: none;
+  background-color: #14bdee;
+  border-width: 0;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1em;
+  margin: 0;
+  opacity: 1;
+  outline: 0;
+  padding: 1.3em 1.6em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-rendering: geometricprecision;
+  text-transform: uppercase;
+  transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.button-48:before {
+  animation: opacityFallbackOut .5s step-end forwards;
+  backface-visibility: hidden;
+  background-color: #384158;
+  clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateZ(0);
+  transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
+  width: 100%;
+}
+
+.button-48:hover:before {
+  animation: opacityFallbackIn 0s step-start forwards;
+  clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+}
+
+.button-48:after {
+  background-color: #14bdee;
+}
+
+.button-48 span {
+  z-index: 1;
+  position: relative;
+}
+
+
+
 *
 {
 	margin: 0;
@@ -46,6 +272,7 @@
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	  
 }
 body
 {
@@ -802,7 +1029,7 @@ section
 .home
 {
 	width: 100%;
-	height: 850px;
+	height: 800px;
 }
 .home_slider_container
 {

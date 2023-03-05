@@ -21,6 +21,9 @@ import { SignUpPageComponent } from './components/sign-up-page/sign-up-page.comp
 import { TeamSectionComponent } from './components/team-section/team-section.component';
 import { TennisPageComponent } from './components/tennis-page/tennis-page.component';
 import { BasketballPageComponent } from './components/basketball-page/basketball-page.component';
+import { HandballPageComponent } from './components/handball-page/handball-page.component';
+import { VolleyballPageComponent } from './components/volleyball-page/volleyball-page.component';
+import { KaratePageComponent } from './components/karate-page/karate-page.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,10 @@ import { BasketballPageComponent } from './components/basketball-page/basketball
     SignUpPageComponent,
     TeamSectionComponent,
     TennisPageComponent,
-    BasketballPageComponent
+    BasketballPageComponent,
+    HandballPageComponent,
+    VolleyballPageComponent,
+    KaratePageComponent
   ],
   imports: [
     BrowserModule,
