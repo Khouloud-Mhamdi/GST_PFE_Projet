@@ -19,6 +19,8 @@ import { IntroSectionComponent } from './components/intro-section/intro-section.
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { SignUpPageComponent } from './components/sign-up-page/sign-up-page.component';
 import { TeamSectionComponent } from './components/team-section/team-section.component';
+import { TennisPageComponent } from './components/tennis-page/tennis-page.component';
+import { BasketballPageComponent } from './components/basketball-page/basketball-page.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { TeamSectionComponent } from './components/team-section/team-section.com
     IntroSectionComponent,
     LoginPageComponent,
     SignUpPageComponent,
-    TeamSectionComponent
+    TeamSectionComponent,
+    TennisPageComponent,
+    BasketballPageComponent
   ],
   imports: [
     BrowserModule,

@@ -1036,17 +1036,36 @@ section
 	border-radius: 6px;
 	background: #FFFFFF;
 	box-shadow: 0px 1px 10px rgba(29,34,47,0.1);
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
 }
 .course_image
 {
 	width: 100%;
+	
+	
 	border-top-left-radius: 6px;
 	border-top-right-radius: 6px;
 	overflow: hidden;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
 }
 .course_image img
 {
 	max-width: 100%;
+	
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+	
 }
 .course_body
 {
@@ -1610,8 +1629,8 @@ section
 .news
 {
 	width: 100%;
-	padding-top: 93px;
-	padding-bottom: 100px;
+	padding-top: 0px;
+	padding-bottom: 0px;
 	background: #FFFFFF;
 }
 .news_row
