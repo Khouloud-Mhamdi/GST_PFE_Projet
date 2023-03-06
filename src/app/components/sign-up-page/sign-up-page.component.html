@@ -1,17 +1,109 @@
 
+
 <div class="courses">
-  <div class="section_background parallax-window" data-parallax="scroll" data-image-src="assets/photosGST/theme1.jpg" data-speed="0.8"></div>
-  <div class="container">
-      <div class="row">
-          <div class="col">
-              <div class="section_title_container text-center">
-                  <h2 class="section_title">Inscris-toi en un clic </h2>
-
-              </div>
-          </div>
-      </div>
-
-
+    <div class="section_background parallax-window" data-parallax="scroll" data-image-src="/photosGST/theme1.jpg" data-speed="0.8"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="section_title_container text-center">
+                    <h2 class="section_title">  Créer compte   </h2>
+  
+                </div>
+            </div>
+        </div>
+  
+  
+    </div>
   </div>
-</div>
+  
+  
+  
+  <div class="counter" style="margin-top: 100px;" >
+    <div class="counter_background" style="background-image:url(assets/photosGST/intro11.jpg)"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="counter_content">
+            <h2 class="counter_title">Inscrit-toi en un clic </h2>
+            <div class="counter_text"><p>Vous pouvez créer un nouveau compte , pour reserver un terrain en ligne </p></div>
+  
+            <!-- Milestones -->
+  
+            <div class="milestones d-flex flex-md-row flex-column align-items-center justify-content-between">
+  
+              <!-- Milestone -->
+              <div class="milestone">
+                <div class="milestone_counter" data-end-value="15"></div>
+                <div class="milestone_text"></div>
+              </div>
+  
+  
+  
+            </div>
+          </div>
+  
+        </div>
+      </div>
+       <br>
+       <br>
+      <div class="counter_form"  >
+        <div class="row fill_height">
+          <div class="col fill_height">
 
+            <form class="counter_form_content d-flex flex-column align-items-center justify-content-center" [formGroup]="signupForm">
+              <div class="counter_form_title">S'inscrire</div>
+              <!--nom-->
+              <input type="text" class="counter_input" placeholder="Nom " formControlName="nom" required="required">
+              <div *ngIf="signupForm.controls['nom'].invalid && (
+                signupForm.controls['nom'].touched || signupForm.controls['nom'].dirty
+              )"> 
+                   <div *ngIf ="signupForm.controls['nom'].errors?.['required']" class="red"> Votre nom est obligatoire  </div>
+                   <div  *ngIf ="signupForm.controls['nom'].errors?.['minlength']" class="red"> Au mois 3 caractéres  </div>
+              </div>
+              <!--prenom-->
+              <input type="text" class="counter_input" placeholder="Prenom" formControlName="prenom"required="required">
+              <div *ngIf="signupForm.controls['prenom'].invalid && (
+                signupForm.controls['prenom'].touched || signupForm.controls['prenom'].dirty
+              )"> 
+                   <div *ngIf ="signupForm.controls['prenom'].errors?.['required']" class="red"> Votre prenom est obligatoire  </div>
+                   <div  *ngIf ="signupForm.controls['prenom'].errors?.['minlength']" class="red"> Au moins 3 caractére  </div>
+              </div>
+              <!--email-->
+              <input type="email" class="counter_input" placeholder="Email"  formControlName="email"required="required">
+              <div *ngIf="signupForm.controls['email'].invalid && (
+                signupForm.controls['email'].touched || signupForm.controls['email'].dirty
+              )"> 
+                   <div *ngIf ="signupForm.controls['email'].errors?.['required']" class="red"> Votre email est obligatoire </div>
+                   <div *ngIf ="signupForm.controls['email'].errors?.['email']" class="red"> email est incorrecte </div>
+                  
+              </div>
+              
+              <input type="password" class="counter_input" placeholder="Mot de passe " formControlName="mdp" required="required">
+           
+              <div *ngIf="signupForm.controls['mdp'].invalid && (
+                signupForm.controls['mdp'].touched || signupForm.controls['mdp'].dirty
+              )"> 
+                   <div *ngIf ="signupForm.controls['mdp'].errors?.['required']" class="red"> Mot de passe obligatoire </div>
+                   <div *ngIf ="signupForm.controls['mdp'].errors?.['maxlength']" class="red"> Maximum 10 caractéres </div>
+                   <div *ngIf ="signupForm.controls['mdp'].errors?.['minlength']" class="red"> Au moins 5 caractéres </div>
+                  
+              </div>
+              <input type="mdp" class="counter_input" placeholder="confirmer mot de passe "formControlName="confirm" required="required">
+              <div *ngIf="signupForm.controls['confirm'].invalid && (
+                signupForm.controls['confirm'].touched || signupForm.controls['confirm'].dirty
+              )"> 
+                   <div *ngIf ="signupForm.controls['confirm'].errors?.['required']" class="red"> Veuillez confirmer votre mot de passe  </div>
+                   
+              </div>
+             
+              <button type="submit" class="counter_form_button"  (click)="signup()" > Créer </button>
+              <p id="result"> </p>
+              
+            </form>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+  

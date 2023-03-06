@@ -24,6 +24,7 @@ import { BasketballPageComponent } from './components/basketball-page/basketball
 import { HandballPageComponent } from './components/handball-page/handball-page.component';
 import { VolleyballPageComponent } from './components/volleyball-page/volleyball-page.component';
 import { KaratePageComponent } from './components/karate-page/karate-page.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,9 @@ import { KaratePageComponent } from './components/karate-page/karate-page.compon
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule ,
+    FormsModule , 
+    ReactiveFormsModule , 
   ],
   providers: [],
   bootstrap: [AppComponent]

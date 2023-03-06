@@ -49,13 +49,26 @@
     <div class="counter_form"  >
       <div class="row fill_height">
         <div class="col fill_height">
-          <form class="counter_form_content d-flex flex-column align-items-center justify-content-center" action="#">
+          <form class="counter_form_content d-flex flex-column align-items-center justify-content-center" [formGroup]="loginForm">
             <div class="counter_form_title">Se connecter</div>
-            <input type="text" class="counter_input" placeholder="Email :" required="required">
-            <input type="tel" class="counter_input" placeholder="Mot de passe:" required="required">
+            <input type="email" class="counter_input" placeholder="Email " formControlName="email" required="required">
+            <div *ngIf="loginForm.controls['email'].invalid && (
+                loginForm.controls['email'].touched || loginForm.controls['email'].dirty
+              )"> 
+                   <div *ngIf ="loginForm.controls['email'].errors?.['required']" class="red"> Votre email est obligatoire </div>
+                   <div *ngIf ="loginForm.controls['email'].errors?.['email']" class="red"> email est incorrecte </div>
+                  
+              </div>
+            <input type="password" class="counter_input" placeholder="Mot de passe " formControlName="mdp" required="required">
+            <div *ngIf="loginForm.controls['mdp'].invalid && (
+              loginForm.controls['mdp'].touched || loginForm.controls['mdp'].dirty
+            )"> 
+                 <div *ngIf ="loginForm.controls['mdp'].errors?.['required']" class="red"> Veuillez confirmer votre mot de passe  </div>
+                 
+            </div>
             <div> <a href=""> Mot de passe oublié ?</a></div>
 
-            <button type="submit" class="counter_form_button">Se connecter </button>
+            <button type="submit" class="counter_form_button"  (click)="login()" >Se connecter </button>
             <br>
             <div> <a href=""style="font-size: 20px;" >  Vous n'avez pas de compte ? Créez-un</a></div>
           </form>
